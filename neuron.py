@@ -2,6 +2,14 @@
 import numpy as np
 
 
+def onestep(x):
+    b = 5
+    if x >= b:
+        return 1
+    else:
+        return 0
+
+
 # Создание класса "Нейрон”
 class Neuron:
     def __init__(self, w):
@@ -9,7 +17,7 @@ class Neuron:
 
     def y(self, x):
         s = np.dot(self.w, x)
-        return s
+        return onestep(s)
 
 
 # Сумматор
